@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+requests
+pydantic
+torch
+torch-directml
+diffusers
+transformers
+accelerate
+pillow
+opencv-python
+numpy

@@ -12,8 +12,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "electric-violet": "#8A2BE2",
-        "cyber-blue": "#00BFFF",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        muted: "var(--muted)",
+        border: "var(--border)",
+        /* Aliases for old class compatibility temporarily */
+        "electric-violet": "var(--primary)",
+        "cyber-blue": "var(--secondary)",
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",

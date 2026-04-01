@@ -35,13 +35,13 @@ export const MagneticButton = ({ children, className, glow = false, ...props }: 
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={cn(
         "relative rounded-full px-6 py-3 font-medium transition-colors focus:outline-none flex items-center justify-center overflow-hidden",
-        glow && "shadow-[0_0_15px_rgba(138,43,226,0.3)] hover:shadow-[0_0_25px_rgba(0,191,255,0.6)]",
+        glow && "shadow-[0_0_15px_var(--primary)] hover:shadow-[0_0_25px_var(--secondary)]",
         className
       )}
       {...props}
     >
       {glow && (
-        <span className="absolute inset-0 bg-gradient-to-r from-electric-violet to-cyber-blue opacity-0 transition-opacity hover:opacity-20 pointer-events-none" />
+        <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 transition-opacity hover:opacity-20 pointer-events-none" />
       )}
       <span className="relative z-10 flex items-center gap-2">{children}</span>
     </motion.button>

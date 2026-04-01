@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" data-theme="pearl-gold">
       <body className="antialiased min-h-screen bg-background text-foreground tracking-tight no-scrollbar">
         <Navigation />
         {children}

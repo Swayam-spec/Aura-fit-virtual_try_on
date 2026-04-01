@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+@layer base {
+  :root,
+  [data-theme="pearl-gold"],
+  html:not([data-theme]) {
+    /* Pearl & Gold (Default Light Theme) */
+    --background: #FDF9F1; /* Warm gold-tinted background */
+    --foreground: #0A0A0A; /* Deep dark font color for high contrast */
+    --primary: #D4AF37; /* Champagne Gold */
+    --secondary: #EAE0B7; /* Soft Highlight Gold */
+    --accent: #B08D57;
+    --muted: rgba(212, 175, 55, 0.15); 
+    --border: rgba(212, 175, 55, 0.3); /* Gold tinted borders */
+  }
+
+  [data-theme="alabaster-rose"] {
+    /* Alabaster & Rose (Light Theme 2) */
+    --background: #FFF3F5; /* Soft rose-tinted background */
+    --foreground: #0A0A0A; /* Deep dark font color for high contrast */
+    --primary: #D8A7B1; /* Soft Rose */
+    --secondary: #F6E1E4; /* Blush Highlight */
+    --accent: #B78A94;
+    --muted: rgba(216, 167, 177, 0.15);
+    --border: rgba(216, 167, 177, 0.3); /* Rose tinted borders */
+  }
 }
 
 body {
@@ -12,6 +33,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Hide scrollbar */
